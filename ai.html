@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Code Assistant</title>
+    <link rel="stylesheet" href="ai.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1>AI Code Assistant</h1>
+            <div class="controls">
+                <button id="clear-chat" class="icon-btn"><i class="fas fa-trash"></i> Clear Chat</button>
+            </div>
+        </header>
+
+        <div class="workspace">
+            <div class="chat-container" id="chat-container">
+                <!-- Chat messages will appear here -->
+            </div>
+            
+            <div class="code-editor">
+                <div class="editor-header">
+                    <span>Code Editor</span>
+                    <button id="run-code" class="run-btn"><i class="fas fa-play"></i> Run Code</button>
+                </div>
+                <textarea id="code-input" placeholder="Write your code here..."></textarea>
+                <div class="code-output" id="code-output"></div>
+            </div>
+        </div>
+
+        <div class="input-container">
+            <div class="input-tools">
+                <input type="file" id="file-upload" hidden>
+                <label for="file-upload" class="tool-btn"><i class="fas fa-file-upload"></i> Upload File</label>
+            </div>
+            <textarea id="user-input" placeholder="Ask me anything or write code..."></textarea>
+            <button id="send-btn" class="send-btn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script src="ai.js"></script>
+</body>
+</html>
